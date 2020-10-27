@@ -11,6 +11,8 @@ services:
     volumes:
       - ./setup_db.sh:/docker-entrypoint-initdb.d/setup_db.sh
       - ./setup_db_tables.sql:/docker-entrypoint-initdb.d/setup_db_tables.sql
+      # TODO: configuration for var/lib/postgresql/data/pg_hba.conf
+      # https://debezium.io/documentation/reference/1.0/connectors/postgresql.html#PostgreSQL-permissions
     expose:
       - "5432"
     ports:

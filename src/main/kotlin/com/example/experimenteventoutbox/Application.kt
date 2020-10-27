@@ -44,7 +44,8 @@ var config: Configuration = Configuration.create()
     // connector properties
     // --------------------
     .with("name", "db-connector")
-    .with("database.hostname", "0.0.0.0")
+    // .with("database.hostname", "0.0.0.0")
+    .with("database.hostname", "localhost")
     .with("database.port", 5432)
     .with("database.user", "experimenteventoutbox")
     .with("database.password", "experimenteventoutbox")
